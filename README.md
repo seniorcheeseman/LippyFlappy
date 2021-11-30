@@ -1,1 +1,1 @@
-# LippyFlappyJs
+# LippyFlappy
