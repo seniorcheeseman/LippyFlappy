@@ -1,0 +1,52 @@
+doctype html
+title Lippy Flappy
+head
+  link(rel='stylesheet' type='text/css' href='public/stylesheets/style.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js')
+div
+  label(for='audio-upload') Upload an audio file:
+div
+  input#audio-upload(type='file' accept='.mp3,audio/*')
+div
+  label(for='closed-upload') Upload an closed file:
+div
+  input#closed-upload(type='file' accept='image/png')
+div
+  label(for='half-upload') Upload an half mouth file:
+div
+  input#half-upload(type='file' accept='image/png')
+div
+  label(for='full-upload') Upload an full mouth file:
+div
+  input#full-upload(type='file' accept='image/png')
+button#runAudioLevels() Click me
+
+
+div
+  label(for='lowLevel') Choose Lip Flap FPS:
+  input#fpsSpeed(type='number' value="24")
+div
+  label(for='lowLevel') Choose Low Audio Threshold:
+  input#lowLevel(type='number' value="10")
+div
+  label(for='midLevel') Choose Mid Audio Threshold:
+  input#midLevel(type='number' value="20")
+
+h3 Click start to transcode images to mp4 (x264) and play!
+div
+  label Lip Flaps ONLY Video
+
+video#output-video-LipFlap(controls='')
+br
+div
+  label Lip Flaps With Audio Video
+video#output-video(controls='')
+br
+button#start-btn Start
+p#message
+
+div
+  canvas#myChart(width='400' height='400')
+
+script(type='text/javascript' src='public/javascripts/lippyFlappy.js')
